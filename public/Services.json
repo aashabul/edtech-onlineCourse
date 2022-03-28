@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Machine Learning",
+    "level": "Intermediate",
+    "duration": "6 months",
+    "img": "https://www.atriainnovation.com/wp-content/uploads/2021/02/portada.jpg",
+    "price": 100
+  },
+  {
+    "name": "Deep Learning",
+    "level": "Basics",
+    "duration": "2 months",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKMJo8EoctOjr5E1FXdtM1owyrzhfGVEvy4h7Z723Ot9QGo2gnK_vLGiZWf1Gpy9ik14E&usqp=CAU",
+    "price": 30
+  },
+  {
+    "name": "Networking",
+    "level": "Advanced",
+    "duration": "4 months",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7L-2Q5JGXTYLyPc18S6iIRGs08jnM4Y0kHtrUHmzDQCgj5srNqXEDgYHthZYr8-i5eb8&usqp=CAU",
+    "price": 50
+  },
+  {
+    "name": "SQA Engineering",
+    "level": "Intermediate",
+    "duration": "4.5 months",
+    "img": "https://media.istockphoto.com/vectors/flat-design-with-people-sqa-software-quality-assurance-acronym-vector-id1292486657?k=20&m=1292486657&s=612x612&w=0&h=LdiUAxWxSdUx2GYZdG-ZaYdaMcryJfqlH6e2GlBC49g=",
+    "price": 60
+  },
+  {
+    "name": "Data Science",
+    "level": "Beginner",
+    "duration": "5 months",
+    "img": "https://d35fo82fjcw0y8.cloudfront.net/2019/01/17102218/data-science-in-marketing-post-venn-diagram.jpg",
+    "price": 100
+  },
+  {
+    "name": "Statistics",
+    "level": "Advanced",
+    "duration": "6 months",
+    "img": "https://images.theconversation.com/files/236859/original/file-20180918-158240-1jd9gm6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip",
+    "price": 150
+  },
+  {
+    "name": "Linear Algebra",
+    "level": "Intermediate",
+    "duration": "4 months",
+    "img": "https://ecdn.teacherspayteachers.com/thumbitem/Linear-Equations-Poster-Algebra-1--3373378-1504528754/original-3373378-1.jpg",
+    "price": 80
+  },
+  {
+    "name": "Differential Calculus",
+    "level": "Intermediate",
+    "duration": "4 months",
+    "img": "https://miro.medium.com/max/640/1*Fne1ZRCpE7Y4uCp0bnk0Hg.jpeg",
+    "price": 80
+  },
+  {
+    "name": "Data Structure",
+    "level": "Advanced",
+    "duration": "4 months",
+    "img": "https://pd.daffodilvarsity.edu.bd/web/image/op.course/243/image_1920",
+    "price": 100
+  },
+  {
+    "name": "Algorithms",
+    "level": "Intermediate",
+    "duration": "5 months",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS911t5xAyhpR5WkesI5EeXGs80yGMk413viTfGMlbude_Ca_fwNTgATE7tTOfoI0D_b_c&usqp=CAU",
+    "price": 120
+  }
+]
