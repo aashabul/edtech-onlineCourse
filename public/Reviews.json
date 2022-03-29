@@ -1,0 +1,26 @@
+[
+  {
+    "comment": "I got myself a job at Google!",
+    "star": 5,
+    "name": "Saitama",
+    "email": "saitama@gmail.com",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-o42dRPJr0AOkk_1JfqO6gW2Py3m4Ag0BRg&usqp=CAU",
+    "date": "17/03/2022"
+  },
+  {
+    "comment": "Online learning is a great thing",
+    "star": 5,
+    "name": "Iron Man",
+    "email": "ironman@gmail.com",
+    "image": "https://assets.coingecko.com/coins/images/19849/large/ironman.png?1636044870",
+    "date": "17/03/2022"
+  },
+  {
+    "comment": "Alfred enrolled in 3 courses and also recommended me",
+    "star": 4,
+    "name": "Batman",
+    "email": "batman@gmail.com",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiGR_6Rvl-OaAjDSwiPSPzy1ynveTI_b8mR2-kgTrKpWEkK8apUZfFHdadzkdHHAzdfs&usqp=CAU",
+    "date": "17/03/2022"
+  }
+]

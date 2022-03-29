@@ -35,13 +35,7 @@
     "img": "https://images.theconversation.com/files/236859/original/file-20180918-158240-1jd9gm6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip",
     "price": 150
   },
-  {
-    "name": "Linear Algebra",
-    "level": "Intermediate",
-    "duration": "4 months",
-    "img": "https://ecdn.teacherspayteachers.com/thumbitem/Linear-Equations-Poster-Algebra-1--3373378-1504528754/original-3373378-1.jpg",
-    "price": 80
-  },
+
   {
     "name": "Differential Calculus",
     "level": "Intermediate",

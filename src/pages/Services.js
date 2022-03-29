@@ -36,7 +36,7 @@ const Services = () => {
     };
   }, []);
   return (
-    <Container sx={{ my: 7 }}>
+    <Container sx={{ my: 12 }}>
       <Typography
         variant="h5"
         sx={{ textAlign: "center", my: 5, fontWeight: 600, color: "#264143" }}
