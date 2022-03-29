@@ -17,8 +17,11 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { NavLink } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import useAuth from "../hooks/useAuth";
+import { Button } from "@mui/material";
 
 const Header = () => {
+  const { user, handleSignOut } = useAuth();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -167,45 +170,39 @@ const Header = () => {
             >
               <Typography variant="h6">Service</Typography>
             </NavLink>
-            <NavLink
-              to="/login"
-              style={{
-                textDecoration: "none",
-                color: "#de5499",
-                marginRight: 20,
-              }}
-            >
-              <Typography variant="h6">Login</Typography>
-            </NavLink>
-            <NavLink
+
+            {/* <NavLink
               to="/register"
               style={{
                 textDecoration: "none",
                 color: "#de5499",
-                marginRight: 20,
-              }}
-            >
-              <Typography variant="h6">Register</Typography>
-            </NavLink>
-            <NavLink
-              to="/dashboard"
-              style={{
-                textDecoration: "none",
-                color: "#de5499",
-                marginRight: 20,
+                marginRight: 15,
               }}
             >
               <Typography variant="h6">Dashboard</Typography>
-            </NavLink>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+            </NavLink> */}
+            {user.email ? (
+              <Button
+                onClick={handleSignOut}
+                sx={{
+                  color: "#de5499",
+                  textTransform: "none",
+                }}
+              >
+                <Typography variant="h6">Logout</Typography>
+              </Button>
+            ) : (
+              <NavLink
+                to="/login"
+                style={{
+                  textDecoration: "none",
+                  color: "#de5499",
+                  marginRight: 20,
+                }}
+              >
+                <Typography variant="h6">Login</Typography>
+              </NavLink>
+            )}
 
             <IconButton
               size="large"
@@ -216,8 +213,25 @@ const Header = () => {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              {user.photoURL ? (
+                <img
+                  style={{
+                    borderRadius: "50%",
+                    width: "30px",
+                    marginRight: 10,
+                  }}
+                  src={user.photoURL}
+                  alt="user"
+                />
+              ) : (
+                <AccountCircle />
+              )}
             </IconButton>
+            {user.email && (
+              <Typography sx={{ fontSize: "18px", color: "#264143" }}>
+                {user.displayName}
+              </Typography>
+            )}
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
