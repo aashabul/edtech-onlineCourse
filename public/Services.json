@@ -6,13 +6,7 @@
     "img": "https://www.atriainnovation.com/wp-content/uploads/2021/02/portada.jpg",
     "price": 100
   },
-  {
-    "name": "Deep Learning",
-    "level": "Basics",
-    "duration": "2 months",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKMJo8EoctOjr5E1FXdtM1owyrzhfGVEvy4h7Z723Ot9QGo2gnK_vLGiZWf1Gpy9ik14E&usqp=CAU",
-    "price": 30
-  },
+
   {
     "name": "Networking",
     "level": "Advanced",

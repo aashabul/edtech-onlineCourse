@@ -10,18 +10,20 @@ import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import { NavLink } from "react-router-dom";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { Button } from "@mui/material";
+import LogoutIcon from "@mui/icons-material/Logout";
+import LoginIcon from "@mui/icons-material/Login";
+import HomeIcon from "@mui/icons-material/Home";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
 
 const Header = () => {
   const { user, handleSignOut } = useAuth();
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -43,6 +45,16 @@ const Header = () => {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const handleHome = () => {
+    navigate("/");
+  };
+  const handleService = () => {
+    navigate("/service");
+  };
+  const handleLogin = () => {
+    navigate("/login");
   };
 
   const menuId = "primary-search-account-menu";
@@ -84,38 +96,49 @@ const Header = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      <MenuItem onClick={handleHome}>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
+          <HomeIcon />
         </IconButton>
-        <p>Dashboard</p>
+        <p>Home</p>
       </MenuItem>
-      <MenuItem>
+      <MenuItem onClick={handleService}>
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
+          <LightbulbIcon />
         </IconButton>
-        <p>Cart</p>
+        <p>Services</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Logout</p>
-      </MenuItem>
+      {user.email ? (
+        <MenuItem onClick={handleSignOut}>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="primary-search-account-menu"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <LogoutIcon />
+          </IconButton>
+          <p>Logout</p>
+        </MenuItem>
+      ) : (
+        <MenuItem onClick={handleLogin}>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="primary-search-account-menu"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <LoginIcon />
+          </IconButton>
+          <p>LogIn</p>
+        </MenuItem>
+      )}
     </Menu>
   );
   return (
@@ -189,6 +212,7 @@ const Header = () => {
                   textTransform: "none",
                 }}
               >
+                <LogoutIcon />
                 <Typography variant="h6">Logout</Typography>
               </Button>
             ) : (
@@ -198,8 +222,11 @@ const Header = () => {
                   textDecoration: "none",
                   color: "#de5499",
                   marginRight: 20,
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
+                <LoginIcon />
                 <Typography variant="h6">Login</Typography>
               </NavLink>
             )}
@@ -210,7 +237,7 @@ const Header = () => {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              // onClick={handleProfileMenuOpen}
               color="inherit"
             >
               {user.photoURL ? (
@@ -218,7 +245,6 @@ const Header = () => {
                   style={{
                     borderRadius: "50%",
                     width: "30px",
-                    marginRight: 10,
                   }}
                   src={user.photoURL}
                   alt="user"
@@ -228,7 +254,9 @@ const Header = () => {
               )}
             </IconButton>
             {user.email && (
-              <Typography sx={{ fontSize: "18px", color: "#264143" }}>
+              <Typography
+                sx={{ fontSize: "18px", color: "#264143", marginLeft: 1 }}
+              >
                 {user.displayName}
               </Typography>
             )}

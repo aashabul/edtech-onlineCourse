@@ -10,7 +10,7 @@ import {
   Divider,
   Grid,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -56,12 +56,11 @@ const Service = (props) => {
                 </span>
               </Typography>
             </Box>
-            <Divider />
           </CardContent>
         </CardActionArea>
         <Divider />
         <CardActions sx={{ display: "flex", justifyContent: "center" }}>
-          <Tooltip title="add to cart">
+          {/* <Tooltip title="add to cart">
             <Button
               variant="contained"
               size="small"
@@ -83,7 +82,12 @@ const Service = (props) => {
             >
               <FavoriteBorderIcon />
             </Button>
-          </Tooltip>
+          </Tooltip> */}
+          <Link to="/service" style={{ textDecoration: "none" }}>
+            <Button variant="contained" sx={{ background: "#de5499" }}>
+              Enroll
+            </Button>
+          </Link>
         </CardActions>
         <Divider />
       </Card>
