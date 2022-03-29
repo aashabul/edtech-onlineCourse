@@ -41,7 +41,7 @@ const Banner = () => {
               </Typography>
 
               <Box sx={{ mt: 2 }}>
-                <Link to="/explore" style={{ textDecoration: "none" }}>
+                <Link to="/service" style={{ textDecoration: "none" }}>
                   <Button
                     variant="contained"
                     sx={{

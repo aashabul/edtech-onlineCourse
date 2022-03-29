@@ -4,15 +4,17 @@ import React from "react";
 
 const Sponsor = () => {
   return (
-    <Box sx={{ background: "#F2EBE9", my: 7 }}>
+    <Box sx={{ my: 7, background: "#F2EBE9" }}>
       <Container sx={{ py: 5 }}>
         <Box>
           <Typography
             variant="h5"
-            sx={{ textAlign: "center", fontWeight: "600" }}
+            sx={{ textAlign: "center", fontWeight: "600", color: "#264143" }}
           >
             We collaborate with{" "}
-            <span>100+ leading universites and companies</span>
+            <span style={{ color: "#e99f4c" }}>
+              100+ leading universites and companies
+            </span>
           </Typography>
         </Box>
         <Grid

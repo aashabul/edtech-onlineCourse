@@ -39,7 +39,7 @@ const Services = () => {
     <Container sx={{ my: 7 }}>
       <Typography
         variant="h5"
-        sx={{ textAlign: "center", my: 5, fontWeight: 600 }}
+        sx={{ textAlign: "center", my: 5, fontWeight: 600, color: "#264143" }}
       >
         Available Courses
       </Typography>
